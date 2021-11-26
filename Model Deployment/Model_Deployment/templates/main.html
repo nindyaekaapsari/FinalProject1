@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body style="background: rgb(52, 24, 4);">
+ <div>
+  <img src="https://global-uploads.webflow.com/5f0d53c042a9ed6288de7f8d/5f6337ae2cfaa10946ceeb06_Hacktiv8%20logo%20horizontal%2001%20black-p-500.png"/>
+  <h1 class="display-4">Prediksi Tarif Taksi Online</h1>
+  <p>Final Project 1 Hacktiv8</p>
+  <p>Kampus Merdeka - Studi Independen</p>
+  <span> Teammate: </span>
+  <h6>Nindya Eka Apsari</h6>
+  <h6>Faradilla Ardiyani</h6>
+  <div style="border-top: 4px solid #f3e192; margin-top: 1em">
+ </div>
+ <br>
+ <br>
+ <p class="message">{{ prediction_text }}</p>
+ <div class="container">
+   <div class="image">
+     <figcaption>Keterangan Variabel</figcaption>
+     <img src="https://raw.githubusercontent.com/nindyaekaapsari/FinalProject1/main/var.png" />
+   </div>
+   <div class="text">
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Produk" placeholder="Produk" required="required"/>
+      <input type="text" name="Jarak" placeholder="Jarak" required="required"/>
+      <input type="text" name="Surge_multiplier" placeholder="Surge Multiplier" required="required"/>
+      <input type="text" name="Merek" placeholder="Merek" required="required"/>
+      <input type="text" name="Tujuan" placeholder="Tujuan" required="required"/>
+      <input type="text" name="Asal" placeholder="Asal" required="required"/>
+      <input type="text" name="Hari_dlm_pekan" placeholder="Hari dalam Pekan" required="required"/>
+      <input type="text" name="Visibilitas" placeholder="Visibilitas" required="required"/>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Prediksi</button>
+    </form>
+   </div>
+ </div>
+     <!-- Main Input For Receiving Query to our ML -->
+
+</body>
+
+
+
+
+</html>
